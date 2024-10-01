@@ -1,6 +1,6 @@
 ﻿# Missao-Pratica-Nivel-2-Mundo-2
 
-                                           Instruções
+                                                  Instruções
 
                                                                        
 1º Procedimento: Ordenação com JavaScript e DOM
