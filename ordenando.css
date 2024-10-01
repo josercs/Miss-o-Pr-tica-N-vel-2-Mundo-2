@@ -1,0 +1,60 @@
+/* Centralizando os elementos */
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Estilo dos botões */
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilo da lista */
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 18px;
+  }
+  
+  /* Estilo dos inputs e selects */
+  input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+  }
+  
+  /* Layout com dois blocos */
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .block {
+    width: 45%;
+  }
+  @media (max-width: 768px) {
+    .flex-container {
+      flex-direction: column;
+    }
+  
+    .block {
+      width: 100%;
+    }
+  }
+  

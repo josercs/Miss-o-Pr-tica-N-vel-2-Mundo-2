@@ -1,0 +1,39 @@
+/* Estilos personalizados */
+body {
+    background-color: #ffc107; /* Fundo amarelo */
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.card {
+    width: 250px;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.card-img-top {
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-body {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 0 0 8px 8px;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #555;
+}
