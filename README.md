@@ -1,6 +1,6 @@
 ﻿# Missao-Pratica-Nivel-2-Mundo-2
 
-Instruções
+                       Instruções
 1º Procedimento: Ordenação com JavaScript e DOM
 Crie funções para realizar ordenações com algoritmos como Bubble Sort, Selection Sort e Quick Sort.
 Implemente uma interface HTML para manipular e visualizar as ordenações.
