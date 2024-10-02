@@ -21,61 +21,43 @@
     </select>
   
     <button onclick="ordenar()">Ordenar</button>   
-    <button onclick="misturar()">Misturar</button>
-        
-    <!-- Lista não ordenada (ul) onde os valores digitados e ordenados serão exibidos -->
-    <ul id="valores"></ul>
-    
+    <button onclick="misturar()">Misturar</button>       
+    <ul id="valores"></ul>    
     <script>
         // Inicializamos um array vazio para armazenar os valores adicionados
         let lista = [];
 
         // Função chamada ao clicar no botão "Adicionar"
         function add() {
-            // Obtém o valor digitado pelo usuário
-            const valorInput = document.getElementById('valor');
-            // Obtém o elemento <ul> onde os valores serão mostrados
-            const listaElement = document.getElementById('valores');
-            // Criamos um novo elemento de lista <li> para o valor adicionado
-            let li = document.createElement('li');
-            // O valor digitado é inserido no elemento <li>
-            li.innerHTML = valorInput.value;
-            // O novo item é adicionado à lista exibida no HTML
-            listaElement.appendChild(li);
-            // Adicionamos o valor digitado ao array 'lista', convertendo-o para inteiro
+            
+            const valorInput = document.getElementById('valor');           
+            const listaElement = document.getElementById('valores');           
+            let li = document.createElement('li');         
+            li.innerHTML = valorInput.value;         
+            listaElement.appendChild(li);          
             lista.push(parseInt(valorInput.value));
         }
 
         // Função chamada ao clicar no botão "Ordenar"
         function ordenar() {
-            // Captura o algoritmo escolhido pelo usuário
-            const select = document.getElementById('algoritmo').value;
-            // Obtém o elemento <ul> onde os valores serão exibidos
-            const listaElement = document.getElementById('valores');
-            // Declaramos uma variável para armazenar a lista ordenada
+            
+            const select = document.getElementById('algoritmo').value;        
+            const listaElement = document.getElementById('valores');           
             let sortedList;
-
             // Condicional para escolher qual algoritmo de ordenação será utilizado
-            if (select === 'bubble') {
-                // Se o algoritmo escolhido for Bubble Sort
+            if (select === 'bubble') {               
                 sortedList = bubble_sort(lista);
-            } else if (select === 'selection') {
-                // Se o algoritmo escolhido for Selection Sort
+            } else if (select === 'selection') {               
                 sortedList = selection_sort(lista);
-            } else {
-                // Se o algoritmo escolhido for Quick Sort
+            } else {               
                 sortedList = quick_sort(lista, 0, lista.length - 1);
-            }
-
-            // Atualiza a lista exibida na página com a lista ordenada
+            }         
             listaElement.innerHTML = sortedList.map(num => `<li>${num}</li>`).reduce((acc, val) => acc + val, "");
         }
 
         // Função chamada ao clicar no botão "Misturar" para embaralhar a lista
-        function misturar() {
-            // Função shuffle para embaralhar os itens da lista
-            shuffle(lista, 10);
-            // Atualiza a lista exibida com os valores embaralhados
+        function misturar() {           
+            shuffle(lista, 10);            
             const listaElement = document.getElementById('valores');
             listaElement.innerHTML = lista.map(num => `<li>${num}</li>`).reduce((acc, val) => acc + val, "");
         }
